@@ -1,3 +1,6 @@
+%global commit 282947f73b01df9b6f7f75f7c7e9019186e4e1f1
+%global shortcommit %(c=%{commit}; echo ${c:0:7})
+
 Name:           fdk-aac-free
 Version:        0.1.6
 Release:        3%{?dist}
@@ -5,7 +8,7 @@ Summary:        Third-Party Modified Version of the Fraunhofer FDK AAC Codec Lib
 
 License:        FDK-AAC
 URL:            https://cgit.freedesktop.org/~wtay/fdk-aac/log/?h=fedora
-Source0:        https://github.com/UnitedRPMs/fdk-aac-free/releases/download/0.1.6/fdk-aac-free-455feca.tar.gz
+Source0:        https://github.com/UnitedRPMs/fdk-aac-free/releases/download/0.1.6/fdk-aac-free-%{shortcommit}.tar.gz
 
 # Note you can download the current commit; why not maintain in gitlab or github?
 # ./fdk-aac-free-snapshot -c $commit
@@ -31,7 +34,7 @@ developing applications that use %{name}.
 
 
 %prep
-%autosetup -n fdk-aac-free-455feca
+%autosetup -n %{name}-%{shortcommit}
 autoreconf -vif
 
 %build
