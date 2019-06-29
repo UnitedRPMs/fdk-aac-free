@@ -33,7 +33,7 @@ name=fdk-aac-free
 
 rm -rf ${name}-${shortcommit}/
 rm -f ${name}-${shortcommit}.tar.gz
-git clone -b stripped3 git://people.freedesktop.org/~wtay/fdk-aac ${name}-${shortcommit}
+git clone -b stripped4 git://people.freedesktop.org/~wtay/fdk-aac ${name}-${shortcommit}
 pushd ${name}-${shortcommit}/
 git checkout --force "${commit}" 
 echo "You are in Commit: $( git rev-parse HEAD )"
