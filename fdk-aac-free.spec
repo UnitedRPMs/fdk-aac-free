@@ -3,7 +3,7 @@
 
 Name:           fdk-aac-free
 Version:        2.0.0
-Release:        1.1%{?dist}
+Release:        7%{?dist}
 Summary:        Third-Party Modified Version of the Fraunhofer FDK AAC Codec Library for Android
 
 License:        FDK-AAC
@@ -65,6 +65,9 @@ find %{buildroot} -name '*.la' -print -delete
 
 
 %changelog
+
+* Fri Nov 15 2019 Unitedrpms Project <unitedrpms AT protonmail DOT com> 2.0.0-7
+- Rebuilt
 
 * Thu Jun 27 2019 Unitedrpms Project <unitedrpms AT protonmail DOT com> 2.0.0-1.1
 - Updated to 2.0.0
